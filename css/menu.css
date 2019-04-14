@@ -66,3 +66,18 @@
 .menu-wrap .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
 }
+
+/*Turn lines into X*/
+/*The / is formed by above, the 135 degree rotation. The \ is formed by below:
+  First combined the top and bottom bar into the middle, and then add 90degree to \, which will form /
+*/
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/*Rotate on hover when checked*/
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
